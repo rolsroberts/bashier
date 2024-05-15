@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://ikor-ia5:443/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='SAP__SELF',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="cds_ui_ssacperdcamounts_review" xml:lang="de" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
+            <EntityType Name="C_CostCenterStdHierarchyVHType" sap:label="Standardhierarchie Kostenstellengruppe" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ControllingArea"/>
+                    <PropertyRef Name="CostCenterGroup"/>
+                </Key>
+                <Property Name="ControllingArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:label="Kostenrechnungskreis"/>
+                <Property Name="CostCenterGroup" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:text="CostCenterGroupText" sap:label="Standardhierarchieknoten" sap:quickinfo="Bereich Kostenstellenhierarchie"/>
+                <Property Name="CostCenterGroupText" Type="Edm.String" MaxLength="40" sap:label="Beschreibung" sap:quickinfo="Kurzbeschreibung zu einem Set"/>
+                <Property Name="SetID" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:label="Setname"/>
+                <Property Name="SetDescription" Type="Edm.String" MaxLength="40" sap:label="Beschreibung" sap:quickinfo="Kurzbeschreibung zu einem Set"/>
+            </EntityType>
+            <EntityType Name="C_ProfitCenterStdHierarchyVHType" sap:label="Profitcentergruppe Standardhierarchie" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ControllingArea"/>
+                    <PropertyRef Name="ProfitCenterStandardHierarchy"/>
+                </Key>
+                <Property Name="ControllingArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:required-in-filter="true" sap:label="Kostenrechnungskreis"/>
+                <Property Name="ProfitCenterStandardHierarchy" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:text="ProfitCenterGroupName" sap:label="Standardhierarchieknoten" sap:quickinfo="Profitcenter-Gruppe"/>
+                <Property Name="ProfitCenterGroupName" Type="Edm.String" MaxLength="40" sap:label="Beschreibung" sap:quickinfo="Kurzbeschreibung zu einem Set"/>
+                <Property Name="SetID" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:label="Setname"/>
+                <Property Name="SetDescription" Type="Edm.String" MaxLength="40" sap:label="Beschreibung" sap:quickinfo="Kurzbeschreibung zu einem Set"/>
+            </EntityType>
+            <EntityType Name="C_SESAccrsPerdcAmountsTPType" sap:label="LEB-Abgrenzungen Periodische Beträge" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="AccrualEngineAccrualObjectType"/>
+                    <PropertyRef Name="AccrualObjectLogicalSystem"/>
+                    <PropertyRef Name="CompanyCode"/>
+                    <PropertyRef Name="AccrualObject"/>
+                    <PropertyRef Name="AccrualSubobject"/>
+                    <PropertyRef Name="AccrualItemType"/>
+                    <PropertyRef Name="Ledger"/>
+                    <PropertyRef Name="AccrualEngineReferenceObject"/>
+                    <PropertyRef Name="AccrualPeriodEndDate"/>
+                </Key>
+                <Property Name="AccrualEngineAccrualObjectType" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Komponente" sap:quickinfo="Accrual-Engine-Anwendungskomponente" sap:value-list="standard"/>
+                <Property Name="AccrualObjectLogicalSystem" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Logisches System" sap:quickinfo="Logisches System des Abgrenzungsobjekts" sap:value-list="standard"/>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Buchungskreis" sap:value-list="standard"/>
+                <Property Name="AccrualObject" Type="Edm.String" Nullable="false" MaxLength="32" sap:display-format="UpperCase" sap:label="Abgrenzungsobjekt" sap:quickinfo="Abgrenzungsobjekt-ID"/>
+                <Property Name="AccrualSubobject" Type="Edm.String" Nullable="false" MaxLength="32" sap:display-format="UpperCase" sap:label="AbgrenzUnterobjekt" sap:quickinfo="Abgrenzungsunterobjekt-ID"/>
+                <Property Name="AccrualItemType" Type="Edm.String" Nullable="false" MaxLength="11" sap:display-format="UpperCase" sap:label="AbgrenzPositionsart" sap:quickinfo="Abgrenzungspositionsart"/>
+                <Property Name="Ledger" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="UpperCase" sap:label="Ledger" sap:quickinfo="Ledger in der Hauptbuchhaltung" sap:value-list="standard"/>
+                <Property Name="AccrualEngineReferenceObject" Type="Edm.String" Nullable="false" MaxLength="50" sap:display-format="UpperCase" sap:label="AbgrReferenz-ID" sap:quickinfo="ID des Abgrenzungsreferenzobjekts"/>
+                <Property Name="AccrualPeriodEndDate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:filter-restriction="single-value" sap:required-in-filter="true" sap:label="Letzt. Tag d. Per." sap:quickinfo="Letzter Tag der Periode in der Accrual Engine"/>
+                <Property Name="PurchaseOrder" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Bestellung" sap:quickinfo="Bestellnummer" sap:value-list="standard"/>
+                <Property Name="PurchaseOrderItem" Type="Edm.String" MaxLength="5" sap:display-format="NonNegative" sap:label="Bestellposition" sap:quickinfo="Positionsnummer der Bestellung"/>
+                <Property Name="ServiceEntrySheet" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Erfassungsblatt" sap:quickinfo="Leistungserfassungsblatt"/>
+                <Property Name="ServiceEntrySheetItem" Type="Edm.String" MaxLength="5" sap:display-format="NonNegative" sap:label="PosNr. LE-Blatt" sap:quickinfo="Positionsnummer des Leistungserfassungsblatts"/>
+                <Property Name="SrvcEntrShtItmAcctAssgmtNumber" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="Kontierungsnummer" sap:quickinfo="Laufende Nummer der Kontierung"/>
+                <Property Name="AccrualPeriodStartDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Erster Tag Periode" sap:quickinfo="Erster Tag der Periode in der Accrual Engine"/>
+                <Property Name="TransactionCurrency" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Transaktionswährung" sap:semantics="currency-code"/>
+                <Property Name="CompanyCodeCurrency" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Buchungskreiswährung" sap:semantics="currency-code"/>
+                <Property Name="GlobalCurrency" Type="Edm.String" MaxLength="5" sap:display-format="UpperCase" sap:label="Übergreif. Währung" sap:quickinfo="Übergreifende Währung" sap:semantics="currency-code"/>
+                <Property Name="TotalAccrualQuantityUnit" Type="Edm.String" MaxLength="3" sap:label="Basismengeneinheit" sap:semantics="unit-of-measure"/>
+                <Property Name="ProposedAccrAmtInTransCrcy" Type="Edm.Decimal" Precision="15" Scale="3" sap:unit="TransactionCurrency" sap:variable-scale="true" sap:label="Vorgeschl. Btr. (TW)" sap:quickinfo="Vorgeschlagener Betrag in Transaktionswährung"/>
+                <Property Name="ProposedAccrAmtInCoCodeCrcy" Type="Edm.Decimal" Precision="15" Scale="3" sap:unit="CompanyCodeCurrency" sap:variable-scale="true" sap:label="Vorgesch. Btr. (BW)" sap:quickinfo="Vorgeschlagener Betrag in Buchungskreiswährung"/>
+                <Property Name="ProposedAccrAmtInGlobalCrcy" Type="Edm.Decimal" Precision="15" Scale="3" sap:unit="GlobalCurrency" sap:variable-scale="true" sap:label="Vorgesch. Btr. (ÜW)" sap:quickinfo="Vorgeschlagener Betrag in übergreifender Währung"/>
+                <Property Name="AccrualEnginePrpsdQtyInBsUnt" Type="Edm.Decimal" Precision="15" Scale="3" sap:unit="TotalAccrualQuantityUnit" sap:label="Periodenmenge"/>
+                <Property Name="AccrSubobjectLifeCycleStatus" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:text="AccrSubobjLifeCycleStatusName" sap:label="Lebenszyklusstatus" sap:quickinfo="Lebenszyklusstatus eines Abgrenzungsunterobjekts" sap:value-list="fixed-values"/>
+                <Property Name="AccrSubobjLifeCycleStatusName" Type="Edm.String" MaxLength="60" sap:label="LebZyklusStat Beschr" sap:quickinfo="Lebenszyklusstatusbeschreibung eines Abgrenzungsunterobjekts" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="AccrSubobjPauseDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Anhaltedatum"/>
+                <Property Name="AccrSubobjSuspensionDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Aussetzungsdatum"/>
+                <Property Name="AccrSubobjPrematureFinishDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Datum vorz. Beendig." sap:quickinfo="Datum der vorzeitigen Beendigung"/>
+                <Property Name="ServiceEntrySheetName" Type="Edm.String" MaxLength="40" sap:label="Name Erfassungsblatt" sap:quickinfo="Name des Leistungserfassungsblatts"/>
+                <Property Name="ServicePerformanceDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Erbringungsdatum" sap:quickinfo="Datum der Leistungserbringung"/>
+                <Property Name="ServicePerformanceEndDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Enddatum LEZ" sap:quickinfo="Enddatum des Leistungserbringungszeitraums"/>
+                <Property Name="MaterialGroup" Type="Edm.String" MaxLength="9" sap:display-format="UpperCase" sap:label="Produktgruppe"/>
+                <Property Name="Supplier" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Lieferant"/>
+                <Property Name="MaterialType" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Materialart"/>
+                <Property Name="PurchasingOrganization" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="EinkOrganisation" sap:quickinfo="Einkaufsorganisation"/>
+                <Property Name="PurchasingGroup" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Einkäufergruppe"/>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Werk"/>
+                <Property Name="QuantityUnit" Type="Edm.String" MaxLength="3" sap:label="Mengeneinheit" sap:quickinfo="Mengeneinheit für Leistungserfassungseintrag" sap:semantics="unit-of-measure"/>
+                <Property Name="Quantity" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="QuantityUnit" sap:label="Menge"/>
+                <Property Name="NetAmount" Type="Edm.Decimal" Precision="13" Scale="3" sap:unit="TransactionCurrency" sap:variable-scale="true" sap:label="Nettobetrag" sap:quickinfo="Nettobetrag in Transaktionswährung"/>
+                <Property Name="CostCenter" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Kostenstelle" sap:value-list="standard"/>
+                <Property Name="CostCenterStandardHierArea" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:label="Kostenstellengruppe" sap:value-list="standard"/>
+                <Property Name="GLAccount" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Sachkonto" sap:quickinfo="Nummer des Sachkontos"/>
+                <Property Name="BusinessArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Geschäftsbereich"/>
+                <Property Name="SalesOrder" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Kundenauftrag"/>
+                <Property Name="SalesOrderItem" Type="Edm.String" MaxLength="6" sap:display-format="NonNegative" sap:label="Position" sap:quickinfo="Kundenauftragsposition"/>
+                <Property Name="OrderID" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Auftrag" sap:quickinfo="Auftragsnummer"/>
+                <Property Name="ControllingArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Kostenrechnungskreis" sap:value-list="standard"/>
+                <Property Name="CostObject" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Kostenträger"/>
+                <Property Name="ProfitCenter" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Profitcenter" sap:value-list="standard"/>
+                <Property Name="ProfitCenterStandardHierarchy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:filter-restriction="single-value" sap:label="Profitcenter-Gruppe" sap:value-list="standard"/>
+                <Property Name="WBSElementExternalID" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:label="PSP-Element" sap:quickinfo="Projektstrukturplanelement (PSP-Element) bearbeitet" sap:value-list="standard"/>
+                <Property Name="ProjectNetwork" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Netzplan" sap:quickinfo="Netzplannummer für Kontierung"/>
+                <Property Name="CostCtrActivityType" Type="Edm.String" MaxLength="6" sap:display-format="UpperCase" sap:label="Leistungsart"/>
+                <Property Name="BusinessProcess" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Geschäftsprozess"/>
+                <Property Name="Fund" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Fonds"/>
+                <Property Name="FunctionalArea" Type="Edm.String" MaxLength="16" sap:display-format="UpperCase" sap:label="Funktionsbereich"/>
+                <Property Name="BudgetPeriod" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Budgetperiode"/>
+                <Property Name="GrantID" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Förderung"/>
+                <Property Name="FundedProgram" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:label="Haushaltsprogramm"/>
+                <Property Name="NetworkActivityInternalID" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Zähler" sap:quickinfo="Interner Zähler"/>
+                <Property Name="ProjectNetworkInternalID" Type="Edm.String" MaxLength="10" sap:display-format="NonNegative" sap:label="Plannummer Vorgänge" sap:quickinfo="Plannummer zu Vorgängen im Auftrag"/>
+                <Property Name="NetworkActivity" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Vorg./Aktiv." sap:quickinfo="Nummer Vorgang/Aktivität" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="C_SrvcEntrShtAccrsCoCodeVHType" sap:label="Buchungskreiszuordnung für SSAC" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="AccrualEngineAccrualObjectType"/>
+                    <PropertyRef Name="CompanyCode"/>
+                </Key>
+                <Property Name="AccrualEngineAccrualObjectType" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Komponente" sap:quickinfo="Accrual-Engine-Anwendungskomponente"/>
+                <Property Name="CompanyCode" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="Buchungskreis"/>
+                <Property Name="CompanyCodeName" Type="Edm.String" MaxLength="25" sap:label="Gesellschaftsname" sap:quickinfo="Buchungskreis- oder Gesellschafts-Bezeichnung"/>
+                <Property Name="ControllingArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Kostenrechnungskreis"/>
+                <Property Name="FinancialManagementArea" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Finanzkreis"/>
+            </EntityType>
+            <EntityType Name="I_AccrEngineAccrObjectTypeType" sap:label="Accrual-Engine-Abgrenzungsobjektart" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="AccrualEngineAccrualObjectType"/>
+                </Key>
+                <Property Name="AccrualEngineAccrualObjectType" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="AccrualEngineAccrualObjectType_Text" sap:label="Komponente" sap:quickinfo="Accrual-Engine-Anwendungskomponente"/>
+                <Property Name="AccrualEngineAccrualObjectType_Text" Type="Edm.String" MaxLength="50" sap:label="Beschreibung" sap:quickinfo="Text" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="AccrEngineParamFieldsStructure" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Parameter-Felder" sap:quickinfo="Struktur mit Feldern (Einträgen in) der Tabelle ACEDSOP"/>
+                <Property Name="AccrObjTypeIsAvailableInCloud" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="In Cloud verfügbar" sap:quickinfo="Anwendungskomponente ist in Cloud verfügbar"/>
+            </EntityType>
+            <EntityType Name="I_AccrEngineSubobjLifeCycStsType" sap:label="Lebenszyklusstatus des Abgrenzungsunterobjekts" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="AccrSubobjectLifeCycleStatus"/>
+                </Key>
+                <Property Name="AccrSubobjectLifeCycleStatus" Type="Edm.String" Nullable="false" MaxLength="1" sap:display-format="UpperCase" sap:text="AccrSubobjectLifeCycleStatus_Text" sap:label="Lebenszyklusstatus" sap:quickinfo="Lebenszyklusstatus eines Abgrenzungsunterobjekts"/>
+                <Property Name="AccrSubobjectLifeCycleStatus_Text" Type="Edm.String" MaxLength="60" sap:label="LebZyklusStat Beschr" sap:quickinfo="Lebenszyklusstatusbeschreibung eines Abgrenzungsunterobjekts" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="I_ControllingAreaStdVHType" sap:label="Kostenrechnungskreis" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ControllingArea"/>
+                </Key>
+                <Property Name="ControllingArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="ControllingAreaName" sap:label="Kostenrechnungskreis"/>
+                <Property Name="ControllingAreaName" Type="Edm.String" MaxLength="25" sap:label="Kostenrechnungskreisname"/>
+            </EntityType>
+            <EntityType Name="I_CostCenterVHType" sap:label="Wertehilfe für Kostenstelle" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CostCenter"/>
+                    <PropertyRef Name="ControllingArea"/>
+                    <PropertyRef Name="ValidityEndDate"/>
+                </Key>
+                <Property Name="CostCenter" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="CostCenterName" sap:label="Kostenstelle"/>
+                <Property Name="ControllingArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="ControllingArea_Text" sap:label="Kostenrechnungskreis" sap:value-list="standard"/>
+                <Property Name="ControllingArea_Text" Type="Edm.String" MaxLength="25" sap:label="Kostenrechnungskreisname" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ValidityEndDate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:filter-restriction="single-value" sap:label="Gültig bis" sap:quickinfo="Datum gültig bis"/>
+                <Property Name="CostCenterName" Type="Edm.String" MaxLength="20" sap:label="Kostenstellenname"/>
+                <Property Name="CompanyCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Buchungskreis"/>
+                <Property Name="CostCenterCategory" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Art der Kostenstelle"/>
+                <Property Name="CostCtrResponsiblePersonName" Type="Edm.String" MaxLength="20" sap:label="Verantwortlicher"/>
+                <Property Name="CostCtrResponsibleUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Verantw. Benutzer" sap:quickinfo="Verantwortlicher Benutzer"/>
+                <Property Name="ValidityStartDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:filter-restriction="single-value" sap:label="Gültig ab" sap:quickinfo="Datum gültig ab"/>
+                <Property Name="ProfitCenter" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Profitcenter"/>
+                <Property Name="CostCenterResponsibilityArea" Type="Edm.String" MaxLength="16"/>
+            </EntityType>
+            <EntityType Name="I_LedgerStdVHType" sap:label="Ledger" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Ledger"/>
+                </Key>
+                <Property Name="Ledger" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="UpperCase" sap:text="LedgerName" sap:label="Ledger" sap:quickinfo="Ledger in der Hauptbuchhaltung"/>
+                <Property Name="IsLeadingLedger" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Führendes Ledger" sap:quickinfo="Kennzeichen Führendes Ledger"/>
+                <Property Name="LedgerName" Type="Edm.String" MaxLength="30" sap:label="Ledger-Bezeichnung"/>
+            </EntityType>
+            <EntityType Name="I_LogicalSystemType" sap:label="Logisches System" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="LogicalSystem"/>
+                </Key>
+                <Property Name="LogicalSystem" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="LogicalSystem_Text" sap:label="Logisches System"/>
+                <Property Name="LogicalSystem_Text" Type="Edm.String" MaxLength="40" sap:label="Bezeichnung" sap:quickinfo="Bezeichnung des Logischen Systems" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="I_ProfitCenterVHType" sap:label="Profitcenter" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="ControllingArea"/>
+                    <PropertyRef Name="ProfitCenter"/>
+                    <PropertyRef Name="ValidityEndDate"/>
+                </Key>
+                <Property Name="ControllingArea" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:text="ControllingArea_Text" sap:label="Kostenrechnungskreis" sap:value-list="standard"/>
+                <Property Name="ControllingArea_Text" Type="Edm.String" MaxLength="25" sap:label="Kostenrechnungskreisname" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="ProfitCenter" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:text="ProfitCenterName" sap:label="Profitcenter"/>
+                <Property Name="ValidityEndDate" Type="Edm.DateTime" Nullable="false" Precision="0" sap:display-format="Date" sap:label="Gültig bis" sap:quickinfo="Datum gültig bis"/>
+                <Property Name="ProfitCenterStandardHierarchy" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Hierarchiebereich" sap:quickinfo="Profit Center Bereich"/>
+                <Property Name="ProfitCenterName" Type="Edm.String" MaxLength="20" sap:label="Profitcenter-Name" sap:quickinfo="Beschreibung des Profitcenters"/>
+                <Property Name="ValidityStartDate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Gültig ab" sap:quickinfo="Datum gültig ab"/>
+                <Property Name="ProfitCtrResponsiblePersonName" Type="Edm.String" MaxLength="20" sap:label="Verantwortlicher PC" sap:quickinfo="Verantwortlicher des Profit Centers"/>
+                <Property Name="Segment" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:text="Segment_Text" sap:label="Segment" sap:quickinfo="Segment für Segmentberichterstattung"/>
+                <Property Name="Segment_Text" Type="Edm.String" MaxLength="50" sap:label="Segmentname" sap:creatable="false" sap:updatable="false"/>
+            </EntityType>
+            <EntityType Name="I_PurOrdAccrsCFinPurgDocVHType" sap:label="Eingabehilfe für Einkaufsbeleg" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="PurchasingDocument"/>
+                    <PropertyRef Name="AccrualObjectLogicalSystem"/>
+                    <PropertyRef Name="PurchasingDocumentItem"/>
+                </Key>
+                <Property Name="PurchasingDocument" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Bestellung" sap:quickinfo="Bestellnummer"/>
+                <Property Name="AccrualObjectLogicalSystem" Type="Edm.String" Nullable="false" MaxLength="10" sap:display-format="UpperCase" sap:label="Logisches System" sap:quickinfo="Logisches System des Abgrenzungsobjekts"/>
+                <Property Name="PurchasingDocumentItem" Type="Edm.String" Nullable="false" MaxLength="5" sap:display-format="NonNegative" sap:label="Bestellposition" sap:quickinfo="Positionsnummer der Bestellung"/>
+                <Property Name="CompanyCode" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Buchungskreis"/>
+                <Property Name="PurchasingDocumentType" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Einkaufsbelegart"/>
+                <Property Name="PurchasingGroup" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Einkäufergruppe"/>
+                <Property Name="PurchasingOrganization" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="EinkOrganisation" sap:quickinfo="Einkaufsorganisation"/>
+                <Property Name="PurchasingDocumentCategory" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Einkaufsbelegtyp" sap:quickinfo="Typ des Einkaufsbelegs"/>
+                <Property Name="Supplier" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Lieferant"/>
+                <Property Name="PurchasingDocumentDeletionCode" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Löschkennzeichen" sap:quickinfo="Löschkennzeichen im Einkaufsbeleg"/>
+                <Property Name="ReleaseIsNotCompleted" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Freigaberelevant" sap:quickinfo="Freigabe unvollständig"/>
+                <Property Name="PurchasingCompletenessStatus" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="unvollständig" sap:quickinfo="Bestellung noch nicht komplett"/>
+                <Property Name="IsEndOfPurposeBlocked" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="GeschZweck erfüllt" sap:quickinfo="Geschäftszweck erfüllt"/>
+                <Property Name="PurchasingDocumentItemText" Type="Edm.String" MaxLength="40" sap:label="Kurztext"/>
+                <Property Name="Material" Type="Edm.String" MaxLength="18" sap:display-format="UpperCase" sap:label="Material" sap:quickinfo="Materialnummer"/>
+                <Property Name="MaterialGroup" Type="Edm.String" MaxLength="9" sap:display-format="UpperCase" sap:label="Warengruppe"/>
+                <Property Name="Plant" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Werk"/>
+                <Property Name="IsCompletelyDelivered" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Endlieferung" sap:quickinfo="Endlieferungskennzeichen"/>
+                <Property Name="IsFinallyInvoiced" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Endrechnung" sap:quickinfo="Endrechnungskennzeichen"/>
+            </EntityType>
+            <EntityType Name="I_WBSElementBasicDataStdVHType" sap:label="Grunddaten für PSP-Element" sap:value-list="true" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="WBSElementInternalID"/>
+                </Key>
+                <Property Name="WBSElementInternalID" Type="Edm.String" Nullable="false" MaxLength="8" sap:display-format="NonNegative" sap:label="Interne ID PSP" sap:quickinfo="PSP-Element"/>
+                <Property Name="WBSElementExternalID" Type="Edm.String" MaxLength="24" sap:display-format="UpperCase" sap:text="WBSDescription" sap:label="PSP-Element" sap:quickinfo="Projektstrukturplanelement (PSP-Element) bearbeitet"/>
+                <Property Name="WBSDescription" Type="Edm.String" MaxLength="40" sap:label="PSP-Elementname"/>
+            </EntityType>
+            <EntityType Name="SAP__Currency" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="CurrencyCode"/>
+                </Key>
+                <Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Währung" sap:semantics="currency-code"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Iso-Code"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="Kurztext"/>
+                <Property Name="DecimalPlaces" Type="Edm.Byte" Nullable="false" sap:label="Dezimalen"/>
+            </EntityType>
+            <EntityType Name="SAP__UnitOfMeasure" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="UnitCode"/>
+                </Key>
+                <Property Name="UnitCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Interne Maßeinheit" sap:semantics="unit-of-measure"/>
+                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO-Code"/>
+                <Property Name="ExternalCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Kaufmännisch"/>
+                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Maßeinheitentext"/>
+                <Property Name="DecimalPlaces" Type="Edm.Int16" sap:label="Dezimalstellen"/>
+            </EntityType>
+            <EntityType Name="SAP__DocumentDescription" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID"/>
+                <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="CreatedAt" Type="Edm.DateTime" Nullable="false" Precision="0" sap:label="Zeitstempel"/>
+                <Property Name="FileName" Type="Edm.String" Nullable="false" MaxLength="256"/>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="256"/>
+                <NavigationProperty Name="Format" Relationship="cds_ui_ssacperdcamounts_review.to_format" FromRole="FromRole_to_format" ToRole="ToRole_to_format"/>
+                <NavigationProperty Name="TableColumns" Relationship="cds_ui_ssacperdcamounts_review.to_tablecolumns" FromRole="FromRole_to_tablecolumns" ToRole="ToRole_to_tablecolumns"/>
+                <NavigationProperty Name="CoverPage" Relationship="cds_ui_ssacperdcamounts_review.to_coverpage" FromRole="FromRole_to_coverpage" ToRole="ToRole_to_coverpage"/>
+                <NavigationProperty Name="Signature" Relationship="cds_ui_ssacperdcamounts_review.to_signature" FromRole="FromRole_to_signature" ToRole="ToRole_to_signature"/>
+                <NavigationProperty Name="PDFStandard" Relationship="cds_ui_ssacperdcamounts_review.to_pdfstandard" FromRole="FromRole_to_pdfstandard" ToRole="ToRole_to_pdfstandard"/>
+            </EntityType>
+            <EntityType Name="SAP__Format" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="FitToPage" Type="cds_ui_ssacperdcamounts_review.SAP__FitToPage" Nullable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FontSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Orientation" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="PaperSize" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="BorderSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MarginSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FontName" Type="Edm.String" Nullable="false" MaxLength="255" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__PDFStandard" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="UsePDFAConformance" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DoEnableAccessibility" Type="Edm.Boolean" Nullable="false" sap:label="Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__TableColumns" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                    <PropertyRef Name="Name"/>
+                    <PropertyRef Name="Header"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Header" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HorizontalAlignment" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__CoverPage" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Title"/>
+                    <PropertyRef Name="Id"/>
+                    <PropertyRef Name="Name"/>
+                </Key>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__Signature" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="DoSign" Type="Edm.Boolean" Nullable="false" sap:label="Flag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Reason" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="SAP__ValueHelp" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="VALUEHELP"/>
+                </Key>
+                <Property Name="VALUEHELP" Type="Edm.String" Nullable="false"/>
+                <Property Name="FIELD_VALUE" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="DESCRIPTION" Type="Edm.String"/>
+            </EntityType>
+            <ComplexType Name="SAP__FitToPage">
+                <Property Name="ErrorRecoveryBehavior" Type="Edm.String" Nullable="false" MaxLength="8" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="IsEnabled" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MinimumFontSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </ComplexType>
+            <Association Name="to_format" sap:content-version="1">
+                <End Type="cds_ui_ssacperdcamounts_review.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_format"/>
+                <End Type="cds_ui_ssacperdcamounts_review.SAP__Format" Multiplicity="1" Role="ToRole_to_format"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_format">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_format">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_tablecolumns" sap:content-version="1">
+                <End Type="cds_ui_ssacperdcamounts_review.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_tablecolumns"/>
+                <End Type="cds_ui_ssacperdcamounts_review.SAP__TableColumns" Multiplicity="*" Role="ToRole_to_tablecolumns"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_tablecolumns">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_tablecolumns">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_coverpage" sap:content-version="1">
+                <End Type="cds_ui_ssacperdcamounts_review.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_coverpage"/>
+                <End Type="cds_ui_ssacperdcamounts_review.SAP__CoverPage" Multiplicity="*" Role="ToRole_to_coverpage"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_coverpage">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_coverpage">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_signature" sap:content-version="1">
+                <End Type="cds_ui_ssacperdcamounts_review.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_signature"/>
+                <End Type="cds_ui_ssacperdcamounts_review.SAP__Signature" Multiplicity="1" Role="ToRole_to_signature"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_signature">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_signature">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="to_pdfstandard" sap:content-version="1">
+                <End Type="cds_ui_ssacperdcamounts_review.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_pdfstandard"/>
+                <End Type="cds_ui_ssacperdcamounts_review.SAP__PDFStandard" Multiplicity="1" Role="ToRole_to_pdfstandard"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_to_pdfstandard">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="ToRole_to_pdfstandard">
+                        <PropertyRef Name="Id"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="cds_ui_ssacperdcamounts_review_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx pdf">
+                <EntitySet Name="SAP__FormatSet" EntityType="cds_ui_ssacperdcamounts_review.SAP__Format" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__PDFStandardSet" EntityType="cds_ui_ssacperdcamounts_review.SAP__PDFStandard" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__TableColumnsSet" EntityType="cds_ui_ssacperdcamounts_review.SAP__TableColumns" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__CoverPageSet" EntityType="cds_ui_ssacperdcamounts_review.SAP__CoverPage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__SignatureSet" EntityType="cds_ui_ssacperdcamounts_review.SAP__Signature" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <EntitySet Name="SAP__ValueHelpSet" EntityType="cds_ui_ssacperdcamounts_review.SAP__ValueHelp" sap:content-version="1"/>
+                <EntitySet Name="C_CostCenterStdHierarchyVH" EntityType="cds_ui_ssacperdcamounts_review.C_CostCenterStdHierarchyVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="C_ProfitCenterStdHierarchyVH" EntityType="cds_ui_ssacperdcamounts_review.C_ProfitCenterStdHierarchyVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:requires-filter="true" sap:content-version="1"/>
+                <EntitySet Name="C_SESAccrsPerdcAmountsTP" EntityType="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:requires-filter="true" sap:content-version="1"/>
+                <EntitySet Name="C_SrvcEntrShtAccrsCoCodeVH" EntityType="cds_ui_ssacperdcamounts_review.C_SrvcEntrShtAccrsCoCodeVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_AccrEngineAccrObjectType" EntityType="cds_ui_ssacperdcamounts_review.I_AccrEngineAccrObjectTypeType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_AccrEngineSubobjLifeCycSts" EntityType="cds_ui_ssacperdcamounts_review.I_AccrEngineSubobjLifeCycStsType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_ControllingAreaStdVH" EntityType="cds_ui_ssacperdcamounts_review.I_ControllingAreaStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_CostCenterVH" EntityType="cds_ui_ssacperdcamounts_review.I_CostCenterVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_LedgerStdVH" EntityType="cds_ui_ssacperdcamounts_review.I_LedgerStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_LogicalSystem" EntityType="cds_ui_ssacperdcamounts_review.I_LogicalSystemType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="I_ProfitCenterVH" EntityType="cds_ui_ssacperdcamounts_review.I_ProfitCenterVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_PurOrdAccrsCFinPurgDocVH" EntityType="cds_ui_ssacperdcamounts_review.I_PurOrdAccrsCFinPurgDocVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="I_WBSElementBasicDataStdVH" EntityType="cds_ui_ssacperdcamounts_review.I_WBSElementBasicDataStdVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="SAP__Currencies" EntityType="cds_ui_ssacperdcamounts_review.SAP__Currency" sap:content-version="1"/>
+                <EntitySet Name="SAP__UnitsOfMeasure" EntityType="cds_ui_ssacperdcamounts_review.SAP__UnitOfMeasure" sap:content-version="1"/>
+                <EntitySet Name="SAP__MyDocumentDescriptions" EntityType="cds_ui_ssacperdcamounts_review.SAP__DocumentDescription" sap:content-version="1"/>
+                <AssociationSet Name="to_formatSet" Association="cds_ui_ssacperdcamounts_review.to_format" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_format"/>
+                    <End EntitySet="SAP__FormatSet" Role="ToRole_to_format"/>
+                </AssociationSet>
+                <AssociationSet Name="to_pdfstandardSet" Association="cds_ui_ssacperdcamounts_review.to_pdfstandard" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_pdfstandard"/>
+                    <End EntitySet="SAP__PDFStandardSet" Role="ToRole_to_pdfstandard"/>
+                </AssociationSet>
+                <AssociationSet Name="to_tablecolumnsSet" Association="cds_ui_ssacperdcamounts_review.to_tablecolumns" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_tablecolumns"/>
+                    <End EntitySet="SAP__TableColumnsSet" Role="ToRole_to_tablecolumns"/>
+                </AssociationSet>
+                <AssociationSet Name="to_signatureSet" Association="cds_ui_ssacperdcamounts_review.to_signature" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_signature"/>
+                    <End EntitySet="SAP__SignatureSet" Role="ToRole_to_signature"/>
+                </AssociationSet>
+                <AssociationSet Name="to_coverpageSet" Association="cds_ui_ssacperdcamounts_review.to_coverpage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_coverpage"/>
+                    <End EntitySet="SAP__CoverPageSet" Role="ToRole_to_coverpage"/>
+                </AssociationSet>
+            </EntityContainer>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrualEngineAccrualObjectType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Komponente"/>
+                        <PropertyValue Property="CollectionPath" String="I_AccrEngineAccrObjectType"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="AccrualEngineAccrualObjectType"/>
+                                    <PropertyValue Property="ValueListProperty" String="AccrualEngineAccrualObjectType"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="AccrualEngineAccrualObjectType_Text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="AccrEngineParamFieldsStructure"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="AccrObjTypeIsAvailableInCloud"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.FilterDefaultValue" String="SSAC"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrualObjectLogicalSystem" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Logisches System"/>
+                        <PropertyValue Property="CollectionPath" String="I_LogicalSystem"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="AccrualObjectLogicalSystem"/>
+                                    <PropertyValue Property="ValueListProperty" String="LogicalSystem"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="LogicalSystem_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/CompanyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Buchungskreis"/>
+                        <PropertyValue Property="CollectionPath" String="C_SrvcEntrShtAccrsCoCodeVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="AccrualEngineAccrualObjectType"/>
+                                    <PropertyValue Property="ValueListProperty" String="AccrualEngineAccrualObjectType"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CompanyCode"/>
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ControllingArea"/>
+                                    <PropertyValue Property="ValueListProperty" String="ControllingArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCodeName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/Ledger" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Ledger"/>
+                        <PropertyValue Property="CollectionPath" String="I_LedgerStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="Ledger"/>
+                                    <PropertyValue Property="ValueListProperty" String="Ledger"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="IsLeadingLedger"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="LedgerName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/PurchaseOrder" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Bestellung"/>
+                        <PropertyValue Property="CollectionPath" String="I_PurOrdAccrsCFinPurgDocVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PurchaseOrder"/>
+                                    <PropertyValue Property="ValueListProperty" String="PurchasingDocument"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="AccrualObjectLogicalSystem"/>
+                                    <PropertyValue Property="ValueListProperty" String="AccrualObjectLogicalSystem"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PurchasingDocumentItem"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PurchasingDocumentType"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PurchasingGroup"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PurchasingOrganization"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PurchasingDocumentCategory"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Supplier"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PurchasingDocumentDeletionCode"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ReleaseIsNotCompleted"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PurchasingCompletenessStatus"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="PurchasingDocumentItemText"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Material"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="MaterialGroup"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Plant"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="IsCompletelyDelivered"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="IsFinallyInvoiced"/>
+                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.SemanticObject" String="PurchaseOrder"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrSubobjectLifeCycleStatus" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Lebenszyklusstatus"/>
+                        <PropertyValue Property="CollectionPath" String="I_AccrEngineSubobjLifeCycSts"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="AccrSubobjectLifeCycleStatus"/>
+                                    <PropertyValue Property="ValueListProperty" String="AccrSubobjectLifeCycleStatus"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="AccrSubobjectLifeCycleStatus_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues"/>
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/CostCenter" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Kostenstelle"/>
+                        <PropertyValue Property="CollectionPath" String="I_CostCenterVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CostCenter"/>
+                                    <PropertyValue Property="ValueListProperty" String="CostCenter"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ControllingArea"/>
+                                    <PropertyValue Property="ValueListProperty" String="ControllingArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ControllingArea_Text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ValidityEndDate"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CostCenterName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CompanyCode"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CostCenterCategory"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CostCtrResponsiblePersonName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CostCtrResponsibleUser"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ValidityStartDate"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ProfitCenter"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/CostCenterStandardHierArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Kostenstellengruppe"/>
+                        <PropertyValue Property="CollectionPath" String="C_CostCenterStdHierarchyVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ControllingArea"/>
+                                    <PropertyValue Property="ValueListProperty" String="ControllingArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CostCenterStandardHierArea"/>
+                                    <PropertyValue Property="ValueListProperty" String="CostCenterGroup"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="CostCenterGroupText"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ControllingArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Kostenrechnungskreis"/>
+                        <PropertyValue Property="CollectionPath" String="I_ControllingAreaStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ControllingArea"/>
+                                    <PropertyValue Property="ValueListProperty" String="ControllingArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ControllingAreaName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ProfitCenter" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Profitcenter"/>
+                        <PropertyValue Property="CollectionPath" String="I_ProfitCenterVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ProfitCenter"/>
+                                    <PropertyValue Property="ValueListProperty" String="ProfitCenter"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ControllingArea"/>
+                                    <PropertyValue Property="ValueListProperty" String="ControllingArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ValidityEndDate"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ProfitCenterName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ValidityStartDate"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ProfitCenterStandardHierarchy"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ProfitCtrResponsiblePersonName"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Segment"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ControllingArea_Text"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Segment_Text"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ProfitCenterStandardHierarchy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Profitcenter-Gruppe"/>
+                        <PropertyValue Property="CollectionPath" String="C_ProfitCenterStdHierarchyVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ControllingArea"/>
+                                    <PropertyValue Property="ValueListProperty" String="ControllingArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ProfitCenterStandardHierarchy"/>
+                                    <PropertyValue Property="ValueListProperty" String="ProfitCenterStandardHierarchy"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ProfitCenterGroupName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/WBSElementExternalID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="PSP-Element"/>
+                        <PropertyValue Property="CollectionPath" String="I_WBSElementBasicDataStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="WBSElementExternalID"/>
+                                    <PropertyValue Property="ValueListProperty" String="WBSElementExternalID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="WBSDescription"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.I_CostCenterVHType/ControllingArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Kostenrechnungskreis"/>
+                        <PropertyValue Property="CollectionPath" String="I_ControllingAreaStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ControllingArea"/>
+                                    <PropertyValue Property="ValueListProperty" String="ControllingArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ControllingAreaName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.I_ProfitCenterVHType/ControllingArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Kostenrechnungskreis"/>
+                        <PropertyValue Property="CollectionPath" String="I_ControllingAreaStdVH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ControllingArea"/>
+                                    <PropertyValue Property="ValueListProperty" String="ControllingArea"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="ControllingAreaName"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.cds_ui_ssacperdcamounts_review_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.cds_ui_ssacperdcamounts_review_Entities/C_CostCenterStdHierarchyVH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="ControllingArea"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.cds_ui_ssacperdcamounts_review_Entities/C_ProfitCenterStdHierarchyVH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="RequiresFilter" Bool="true"/>
+                        <PropertyValue Property="RequiredProperties">
+                            <Collection>
+                                <PropertyPath>ControllingArea</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="ControllingArea"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.cds_ui_ssacperdcamounts_review_Entities/C_SESAccrsPerdcAmountsTP" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="RequiresFilter" Bool="true"/>
+                        <PropertyValue Property="RequiredProperties">
+                            <Collection>
+                                <PropertyPath>AccrualPeriodEndDate</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="AccrualPeriodEndDate"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="CostCenterStandardHierArea"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="ProfitCenterStandardHierarchy"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>NetworkActivity</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="Capabilities.SortRestrictions">
+                    <Record>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>NetworkActivity</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.cds_ui_ssacperdcamounts_review_Entities/I_CostCenterVH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="ValidityEndDate"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="ValidityStartDate"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_CostCenterStdHierarchyVHType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>CostCenterGroup</PropertyPath>
+                        <PropertyPath>ControllingArea</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_ProfitCenterStdHierarchyVHType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>ProfitCenterStandardHierarchy</PropertyPath>
+                        <PropertyPath>ControllingArea</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.I_CostCenterVHType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>ValidityEndDate</PropertyPath>
+                        <PropertyPath>CostCenter</PropertyPath>
+                        <PropertyPath>ControllingArea</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.I_ProfitCenterVHType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>ValidityEndDate</PropertyPath>
+                        <PropertyPath>ProfitCenter</PropertyPath>
+                        <PropertyPath>ControllingArea</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.I_PurOrdAccrsCFinPurgDocVHType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>PurchasingDocumentItem</PropertyPath>
+                        <PropertyPath>PurchasingDocument</PropertyPath>
+                        <PropertyPath>AccrualObjectLogicalSystem</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrualObject" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrualSubobject" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrualItemType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrualEngineReferenceObject" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/PurchaseOrderItem" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ServiceEntrySheetItem" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/SrvcEntrShtItmAcctAssgmtNumber" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrualPeriodStartDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/TransactionCurrency" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/CompanyCodeCurrency" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/GlobalCurrency" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/TotalAccrualQuantityUnit" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ProposedAccrAmtInTransCrcy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ProposedAccrAmtInCoCodeCrcy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ProposedAccrAmtInGlobalCrcy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrualEnginePrpsdQtyInBsUnt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrSubobjLifeCycleStatusName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrSubobjPauseDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrSubobjSuspensionDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/AccrSubobjPrematureFinishDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ServiceEntrySheetName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ServicePerformanceDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ServicePerformanceEndDate" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/MaterialGroup" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/Supplier" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/MaterialType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/PurchasingOrganization" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/PurchasingGroup" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/Plant" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/QuantityUnit" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/Quantity" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/NetAmount" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/GLAccount" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/BusinessArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/SalesOrder" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/SalesOrderItem" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/OrderID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/CostObject" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ProjectNetwork" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/CostCtrActivityType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/BusinessProcess" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/Fund" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/FunctionalArea" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/BudgetPeriod" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/GrantID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/FundedProgram" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/NetworkActivityInternalID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ProjectNetworkInternalID" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/NetworkActivity" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.C_SESAccrsPerdcAmountsTPType/ServiceEntrySheet" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticObject" String="ServiceEntrySheet"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.cds_ui_ssacperdcamounts_review_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Org.OData.Capabilities.V1.BatchSupport">
+                    <Record Type="Org.OData.Capabilities.V1.BatchSupportType">
+                        <PropertyValue Property="ReferencesAcrossChangeSetsSupported" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.CurrencyCodes">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__Currencies"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.UnitsOfMeasure">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__UnitsOfMeasure"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="./$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="SAP__MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.SAP__DocumentDescription">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__MyDocumentDescriptions"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.SAP__Currency/CurrencyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.SAP__UnitOfMeasure/UnitCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.Text" Path="Text"/>
+                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
+                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
+                <Annotation Term="SAP__CodeList.ExternalCode" Path="ExternalCode"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.SAP__UnitOfMeasure" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.AlternateKeys">
+                    <Collection>
+                        <Record>
+                            <PropertyValue Property="Key">
+                                <Collection>
+                                    <Record>
+                                        <PropertyValue Property="Name" Path="ExternalCode"/>
+                                        <PropertyValue Property="Alias" String="ExternalCode"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.SAP__DocumentDescription/CreatedBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.Computed"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.SAP__DocumentDescription/CreatedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__core.Computed"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.SAP__DocumentDescription" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__capabilties.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilties.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilties.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilties.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Format/Orientation"/>
+                                    <PropertyValue Property="AllowedExpressions" String="Multivalue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Format/PaperSize"/>
+                                    <PropertyValue Property="AllowedExpressions" String="Multivalue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.SAP__Format/FitToPage/ErrorRecoveryBehavior" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="../../../../SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27ErrorRecoveryBehaviour%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.SAP__Format/FontName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27FontName%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.SAP__Format/PaperSize" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27PaperSize%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.SAP__Format/Orientation" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27FontName%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <Annotations Target="cds_ui_ssacperdcamounts_review.SAP__TableColumns/HorizontalAlignment" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Record>
+                        <PropertyValue Property="Url" String="./$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HorizontalAlignment%27"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            </Annotations>
+            <atom:link rel="self" href="https://ikor-ia5:443/sap/opu/odata/sap/UI_SSACPERDCAMOUNTS_REVIEW/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="https://ikor-ia5:443/sap/opu/odata/sap/UI_SSACPERDCAMOUNTS_REVIEW/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

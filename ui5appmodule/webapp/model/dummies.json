@@ -1,0 +1,18 @@
+{
+    "kunden": [
+        {
+            "allgemeineInfos": {
+                "fullName": "Robert Essote",
+                "supplierName": "Ikor GmbH",
+                "street": "Augusta-Friedr ",
+                "hausNummer": "999",
+                "plz": "38259",
+                "stadt": "Salzgitter"
+            },
+            "Kontaktdaten": {
+                "webseite": "www.google.com",
+                "twitter": "&dfgdgd"
+            }
+        }
+    ]
+}

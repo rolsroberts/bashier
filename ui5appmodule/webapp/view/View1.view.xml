@@ -1,0 +1,38 @@
+<mvc:View controllerName="ikor.ui5appmodule.controller.View1"
+   displayBlock="true" xmlns:mvc="sap.ui.core.mvc" 
+   xmlns:m="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core">
+<m:Page id="page" title="{i18n>title}">
+<m:customHeader>
+<m:Bar id="fdfd">
+<m:contentRight>
+<m:Button id="edit" text="Edit" enabled="false" press="handleEditPress"/>
+<m:Button id="save" text="Save" type="Emphasized" visible="false" press="handleSavePress"/>
+<m:Button id="cancel" text="Cancel" visible="false" press="handleCancelPress"/>
+</m:contentRight>
+</m:Bar>
+</m:customHeader>
+<m:VBox id="vbox" class="sapUiSmallMargin">
+<f:SimpleForm id="SimpleFormDisplay354wideDual" editable="false" layout="ResponsiveGridLayout" title="Address" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false">
+<core:Title id="_IDGenTitle3" text="OberTitle"/>
+<f:content>
+<core:Title id="_IDGenTitle1" text="Office"/>
+<m:Label id="_IDGenLabel1" text="Full name of the contact"/>
+<m:Text id="nameText" text="{dataModel>/kunden/0/allgemeineInfos/fullName}"/>
+<m:Label id="_IDGenLabel2" text="Street and number where the contact is located"/>
+<m:Text id="_IDGenText1" text="{Street} {HouseNumber}"/>
+<m:Label id="_IDGenLabel3" text="ZIP Code and City"/>
+<m:Text id="_IDGenText2" text="{ZIPCode} {City}"/>
+<m:Label id="_IDGenLabel4" text="Country where the contact is located"/>
+<m:Text id="countryText" text="{Country}"/>
+<core:Title id="_IDGenTitle2" text="Online"/>
+<m:Label id="_IDGenLabel5" text="Web page of the contact"/>
+<m:Text id="_IDGenText3" text="{Url}"/>
+<m:Label id="_IDGenLabel6" text="Twitter account of the contact"/>
+<m:Text id="_IDGenText4" text="{Twitter}"/>
+</f:content>
+</f:SimpleForm>
+</m:VBox>
+</m:Page>
+</mvc:View>
+
+
