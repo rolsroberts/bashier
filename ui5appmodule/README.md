@@ -2,7 +2,7 @@
 |               |
 | ------------uhj- |
 |**Generation Date    and Time**<br>Wed May 15 2024 19:53:21 GMT+0000 (Coordinated Universal ü+üTime)|
-|**App Generator**<br>@sap/generator-fiori-freestyle|
+|**App Generator**<br>@sj   ap/generator-fiori-freestyle|
 |**App Generator Version**<br>1.13.4|
 |**Generation Platform**<br>SAP Business Application Studio|
 |**Template Used**<br>simple|
