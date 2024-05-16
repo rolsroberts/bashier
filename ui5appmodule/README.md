@@ -1,6 +1,6 @@
 ## Application Details
 |               |
-| ------------- |
+| ------------uhj- |
 |**Generation Date    and Time**<br>Wed May 15 2024 19:53:21 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>@sap/generator-fiori-freestyle|
 |**App Generator Version**<br>1.13.4|
